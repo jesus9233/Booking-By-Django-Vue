@@ -1,6 +1,6 @@
 # frontend
 
-> Reservation project
+> Tables booking
 
 ## Build Setup
 
