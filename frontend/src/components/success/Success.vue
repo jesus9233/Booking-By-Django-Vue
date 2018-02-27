@@ -15,19 +15,6 @@
   </div>
 </template>
 
-<style>
-#success {
-  height: 100vh;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-#success .center {
-  top: 30vh;
-}
-#success .btn {
-  margin-top: 30px;
-} 
-.green {
-  color: rgb(77, 183, 100);
-}
+<style lang='scss' scoped>
+  @import 'success.scss'
 </style>

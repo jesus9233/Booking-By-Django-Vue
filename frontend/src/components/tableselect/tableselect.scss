@@ -1,0 +1,114 @@
+@import '../../css/main';
+
+$free-color: #5ec9ff;
+$selected-color: $green-color;
+$reserved-color: black;
+
+#table-select {
+  height: 100vh;
+  padding-bottom: 25px;
+  text-align: center;
+
+  & .center {
+    top: 27vh;
+  }
+}
+
+.date-selector {
+  position: absolute;
+  margin-left:-175px;
+  text-align: center;  
+  padding: 0px;
+  @include top_left_width_height(19vh, 50%, 350px, 45px); 
+
+  & > * {
+    display: inline-block;
+    position: relative;
+  }
+
+  & > a {
+    margin-left: 20px;
+    margin-right: 20px;
+    background: white;
+    border: none;
+  }
+
+  & h5 {
+    color: $link-color;
+  }
+
+}
+
+.room {
+  position: absolute;
+  border: 1px solid #CDD2DA;
+  margin-left:-25vh;
+  @include border_radius(5px); 
+  @include top_left_width_height(unset, 50%, 50vh, 50vh); 
+
+
+}
+
+.table {
+  display: block;
+  position: absolute;
+  text-align: center;
+  border: none;
+  margin:0;
+  padding: 0;
+}
+
+.table-inner {
+  position: absolute;
+  bottom: 0;
+  margin-top: -12px;
+  color: white;
+  @include top_left_width_height(50%, unset, 100%, 100%); 
+}
+
+.table-free,
+.legend-free {
+  background: $free-color;
+}
+
+.table-reserved,
+.legend-reserved {
+  background: $reserved-color;
+}
+
+.table-selected,
+.legend-selected {
+  background: $selected-color;
+}
+
+.table-free:hover, 
+.table-selected:hover {
+ opacity:0.7; 
+ cursor: pointer;
+}
+
+a.table-free:active, 
+a.table-selected:active {
+  opacity: 0.5; 
+}
+
+.rectangle {
+  @include border_radius(2px); 
+}
+
+.oval {
+  @include border_radius(100px / 50px);  
+}
+
+.legend-block {
+  position: absolute;
+  top: 80vh;
+  width: 100%
+}
+
+.legend {
+  display: inline-block;
+  margin-left: 10px;
+  @include border_radius(1px);
+  @include top_left_width_height(unset, unset, 8px, 8px); 
+}

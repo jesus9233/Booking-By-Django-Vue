@@ -50,7 +50,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import sendMessage from '../utils/sendMessage'
+import sendMessage from '../../utils/sendMessage'
 
 export default {
   data () {
@@ -91,37 +91,6 @@ export default {
 
 </script>
 
-<style>
-#booking {
-  height: 100vh;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-#booking .center {
-  top:20vh;
-}
-.order-data {
-  width: 50%;
-  margin-left:25%;
-}
-.buttons {
-  margin-top: 47px;
-}
-.alert {
-  margin-bottom: 0px;
-}
-.order-data a {
-  color: #009EBB; 
-}
-.user-data {
-  text-align: left;
-  width: 50%;
-  margin-left:25%;
-}
-label {
-  margin-top: 15px;
-}
-.require {
-  margin-top: 47px;
-}
+<style lang='scss' scoped>
+  @import 'booking.scss'
 </style>

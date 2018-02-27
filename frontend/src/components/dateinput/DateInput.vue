@@ -38,23 +38,6 @@ export default {
 
 </script>
 
-<style>
-#date-input {
-  height: 100vh;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-#date-input .center {
-  top: 30vh;
-}
-.header {
-  margin-bottom: 40px;
-}
-.button {
-  margin-top: 30px;
-}
-.date {
-  width: 80%;
-  margin-left: 10%;
-}
+<style lang='scss' scoped>
+  @import 'dateinput.scss'
 </style>

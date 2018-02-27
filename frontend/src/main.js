@@ -3,16 +3,16 @@ import VueRouter from 'vue-router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import './css/main.css'
+import './css/main.scss'
 import store from './store'
 import { mapActions } from 'vuex'
 
 
 // Components
-import TableSelect from './components/TableSelect.vue'
-import DateInput from './components/DateInput.vue'
-import Booking from './components/Booking.vue'
-import Success from './components/Success.vue'
+import TableSelect from './components/tableselect/TableSelect.vue'
+import DateInput from './components/dateinput/DateInput.vue'
+import Booking from './components/booking/Booking.vue'
+import Success from './components/success/Success.vue'
 
 
 Vue.use(BootstrapVue)
