@@ -5,14 +5,14 @@
 
 import emailjs from 'emailjs-com'
 
-export default sendMessage(first_name, selected_tables, selected_date, email) {
+const sendMessage = function ({email, name, table_numbers, date}) {
       emailjs.init('<YOUR EmailJS User ID>')
 
       emailjs.send('<YOUR SERVICE ID>','<YOUR TEMPLATE ID>',{
         // Parameters that are passed to the template context
-        first_name: first_name, 
-        tables: selected_tables,
-        date: selected_date,
+        name: name, 
+        table_numbers: table_numbers,
+        date: date,
         email: email
       }).then(function(response) {
        console.log(`SUCCESS. ${response.status}, ${response.text}`);
@@ -20,3 +20,5 @@ export default sendMessage(first_name, selected_tables, selected_date, email) {
        console.log(`FAILED. ${error}`);
      });
     }
+
+    export default sendMessage
