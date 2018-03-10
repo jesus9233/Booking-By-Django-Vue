@@ -1,20 +1,26 @@
 <template>
-  <div id="date-input" class="container col-sm-8">
-    <div class="center">
-
-      <div class="header">
-        <h2>Select a date</h2>
+  <div id="date-input" class="row align-items-center justify-content-center main-row">
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <h2 class="header text-center">Select a date</h2>
+        </div>
       </div>
-      
-      <div class="date form-group">
-        <input type="date" class="date form-control form-control-md" v-model="selected_date"
-        @input="changeDate(selected_date)">
+      <div class="row">
+        <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-4 offset-lg-4">
+          <div class="form-group">
+            <input type="date" class="form-control form-control-md" v-model="selected_date"
+            @input="changeDate(selected_date)">
+          </div>
+        </div>
       </div>
-      
-      <router-link :to="{name:'table-select'}" class="btn btn-outline-success btn-lg button">
-        Next
-      </router-link>
-
+      <div class="row buttons">
+        <div class="col text-center">
+          <router-link :to="{name:'table-select'}" class="btn btn-light-secondary btn-md btn-wide">
+            Next
+          </router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -32,12 +38,8 @@ export default {
   methods: {
     ...mapActions([
       'changeDate'
-      ]),
+    ]),
   }
 }
 
 </script>
-
-<style lang='scss' scoped>
-  @import 'dateinput.scss'
-</style>

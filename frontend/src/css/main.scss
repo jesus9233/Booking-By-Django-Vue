@@ -1,75 +1,63 @@
-   @import 'mixins';
+@import 'mixins';
 
 
-   $link-color: #009EBB;
-   $green-color: rgb(77, 183, 100);
+$link-color: #006278;
+$green-color: #4db864;
+$light-color: #f7f9fa;
+$light-secondary-color: #f2f6f7;
+$secondary-color: #6B737D;
+$dark-color: #373b44;
 
 
+.main-row {
+  height: 100vh;
+}
 
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
+.header {
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: block;
+  position: relative;
+  margin-top: 25px;
+
+  >.btn {
+    margin-left: 25px;
+
+    &:first-child {
+      margin-left: 0px;
     }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
+  }
+}
 
-    .title {
-      position: absolute;
-      top: 2vh;
-      width: 100%;
-      padding-top: 25px;
-      text-align: center;
-    }
+.btn-wide {
+  min-width: 75px;
+}
 
-    .center {
-      position: absolute;
-      top: 50vh;
-      width: 100%;
-      text-align: center;
-    }
+.btn-light-secondary {
+  background: $light-secondary-color;
+  color: $dark-color;
+}
 
-    .absolute-center {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-    }
+.btn-light-secondary:hover {
+  background:hsl(200, 23%, 94%);
+  color: $dark-color;
+}
 
-    .bottom {
-      position: absolute;
-      width: 100%;
-      bottom: 5vh;
-      margin-top: 25px;
-      text-align: center;
-    }
-    
-    a:hover {
-      text-decoration: none;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
+.btn-light-secondary:active {
+  background:hsl(200, 23%, 98%);
+}
 
-    ::-webkit-inner-spin-button { display: none; }
+a {
+  color: $link-color;
 
+  &:active {
+    color: $link-color;
+  }
+
+  &:hover {
+    color: gray;
+    text-decoration: none;
+  }
+}

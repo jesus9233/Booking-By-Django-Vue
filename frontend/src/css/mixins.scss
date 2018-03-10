@@ -4,10 +4,3 @@
 	-ms-border-radius: $radius;
 	border-radius: $radius;
 }
-
-@mixin top_left_width_height($top, $left, $width, $height) {
-	top: $top;
-	left: $left;
-	width: $width;
-	height: $height;
-}
