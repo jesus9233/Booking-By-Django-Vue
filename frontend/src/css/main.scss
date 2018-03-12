@@ -2,12 +2,18 @@
 
 
 $link-color: #006278;
-$green-color: #4db864;
-$light-color: #f7f9fa;
-$light-secondary-color: #f2f6f7;
+$background-color: hsl(200, 23%, 98%);
+$light-color: hsl(200, 23%, 95%);
+$light-secondary-color: hsl(200, 23%, 90%);;
 $secondary-color: #6B737D;
 $dark-color: #373b44;
+$free-color: #5ec9ff;
+$selected-color: #4db864;
+$reserved-color: black;
 
+body {
+  background: $background-color;
+}
 
 .main-row {
   height: 100vh;

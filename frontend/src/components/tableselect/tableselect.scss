@@ -1,25 +1,29 @@
 @import '../../css/main';
 
 
-$free-color: #5ec9ff;
-$selected-color: $green-color;
-$reserved-color: black;
-
-
 .date-selector {
   text-align: center;
-  padding: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  background: $light-secondary-color;
+
+  @include border_radius(5px 5px 0px 0px);
+
+  h5 {
+    margin: 0px;
+  }
 }
 
 .room {
   position: relative;
   background: $light-color;
-  margin-top: 25px;
+  // margin-top: 25px;
   /* for responsive resizing */
   padding-top: 100%;
   width: 100%;
 
-  @include border_radius(5px 5px 0px 0px);
+  // @include border_radius(5px 5px 0px 0px);
 }
 
 .table {
@@ -71,7 +75,7 @@ a.table-selected:active {
 }
 
 .oval {
-  @include border_radius(100px / 50px);
+  @include border_radius(50%);
 }
 
 /* continuation of the room block */
