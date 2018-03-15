@@ -1,7 +1,5 @@
 # frontend
 
-> Tables booking
-
 > Do not forget to create "frontend/utils/sendMessage.js" module for sending email. 
 > You can find an example in "frontend/utils/sendMessage.example.js". 
 > EmailJs service is using by default (https://www.emailjs.com/)
