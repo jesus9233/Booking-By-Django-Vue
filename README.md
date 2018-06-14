@@ -1,5 +1,6 @@
 # Tables booking
-Simple application for booking of tables
+Simple application for booking.
+
 Task description here: https://docs.google.com/document/d/106P2zpTerD-YfTIoE56J3qSr7xp-ttNsOFG7ez8h2dc/edit
 ### Installation
 
