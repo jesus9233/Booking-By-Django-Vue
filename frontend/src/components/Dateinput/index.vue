@@ -1,5 +1,8 @@
 <template>
-  <div id="date-input" class="row align-items-center justify-content-center main-row">
+  <div
+    id="DateInput"
+    class="row align-items-center justify-content-center main-row"
+  >
     <div class="col">
       <div class="row">
         <div class="col">
@@ -9,14 +12,21 @@
       <div class="row">
         <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-4 offset-lg-4">
           <div class="form-group">
-            <input type="date" class="form-control form-control-md" v-model="selected_date"
-            @input="changeDate(selected_date)">
+            <input
+              type="date"
+              class="form-control form-control-md"
+              v-model="selected_date"
+              @input="changeDate(selected_date)"
+            >
           </div>
         </div>
       </div>
       <div class="row buttons">
         <div class="col text-center">
-          <router-link :to="{name:'table-select'}" class="btn btn-light-secondary btn-md btn-wide">
+          <router-link
+            :to="{name:'table-select'}"
+            class="btn btn-light-secondary btn-md btn-wide"
+          >
             Next
           </router-link>
         </div>

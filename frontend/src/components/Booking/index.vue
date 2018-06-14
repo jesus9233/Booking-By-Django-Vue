@@ -1,5 +1,9 @@
 <template>
-  <div v-if="selected_numbers_length>0" id="booking" class="row align-items-center justify-content-center main-row">
+  <div
+    id="Booking"
+    v-if="selected_numbers_length > 0"
+    class="row align-items-center justify-content-center main-row"
+  >
     <div class="col text-center">
       <div class="row">
         <div class="col">
@@ -23,12 +27,26 @@
       <div class="row">
         <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-4 offset-lg-4">
           <div class="form-group">
-            <input v-model="name" class="form-control form-control-md" type="text" placeholder="Name">
+            <input
+              v-model="name"
+              class="form-control form-control-md"
+              type="text"
+              placeholder="Name"
+            >
           </div>
           <div class="form-group">
-            <input v-model="email" type="email" class="form-control form-control-md" placeholder="Email">
+            <input
+              v-model="email"
+              type="email"
+              class="form-control form-control-md"
+              placeholder="Email"
+            >
           </div>
-          <div v-if="name==''||email==''" class="alert alert-danger" role="alert">
+          <div
+            v-if="name==''||email==''"
+            class="alert alert-danger"
+            role="alert"
+          >
             All fields required
           </div>
         </div>
@@ -36,10 +54,17 @@
       <div class="row">
         <div class="col-10 offset-1col-10 offset-1 col-sm-10 offset-sm-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
           <div class="row buttons">
-            <router-link :to="{name:'table-select'}"  class="btn btn-light-secondary btn-wide">
+            <router-link
+              :to="{name:'table-select'}"
+              class="btn btn-light-secondary btn-wide"
+            >
               Up
             </router-link>
-            <button class="btn btn-light-secondary btn-wide" v-if="!(name==''||email=='')" @click="confirmOrder()">
+            <button
+              class="btn btn-light-secondary btn-wide"
+              v-if="!(name==''||email=='')"
+              @click="confirmOrder()"
+            >
               Make order
             </button>
           </div>
@@ -54,7 +79,7 @@ import { mapGetters, mapActions } from 'vuex'
 import sendMessage from '../../utils/sendMessage'
 
 export default {
-  data () {
+  data() {
     return {
       name: '',
       email: ''
@@ -70,9 +95,9 @@ export default {
       'makeOrder'
     ]),
     confirmOrder() {
-      const selected_numbers = this.selected_numbers //Stores the selected
-      //numbers for e-mail (selected numbers will be deleted during the
-      //creation of orders)
+      const selected_numbers = this.selected_numbers /* Stores the selected
+      numbers for e-mail (selected numbers will be deleted during the
+      creation of orders)*/
 
       this.makeOrder().then(() => {
         sendMessage({
@@ -80,11 +105,11 @@ export default {
           date: this.selected_date,
           email: this.email,
           table_numbers: selected_numbers,
-        })
-        this.$router.push({name: 'success'})
-        console.log(`Mail been send:`)
+        });
+        this.$router.push({name: 'success'});
+        console.log(`Mail been send`);
       }).catch(error => {
-        console.log(`Mail hasn't been send: ${error}`)
+        console.log(`Mail hasn't been send: ${error}`);
       })
     }
   }
