@@ -50,6 +50,7 @@ export default {
     ...mapMutations([
       'updateSelectedNumbers',
     ]),
+
     getTableStyle(table) {
       return {
         width:table.width + '%',
@@ -58,6 +59,7 @@ export default {
         left: table.left + '%'
       }
     },
+
     getTableClass(table) {
       return {
         'table': true,
@@ -68,16 +70,19 @@ export default {
         'rectangle': table.shape == 'rectangle'
       }
     },
+
     isReserved(number) {
       //Check if number in reserved numbers
       if (this.reserved_numbers.indexOf(number)==-1) return false;
       else return true;
     },
+
     isSelected(number) {
       //Check if number in selected numbers
       if (this.selected_numbers.indexOf(number)==-1) return false;
       else return true;
     },
+    
     updateSelected(number) {
       if (!this.isReserved(number))
         this.updateSelectedNumbers(number);

@@ -94,6 +94,7 @@ export default {
     ...mapActions([
       'makeOrder'
     ]),
+    
     confirmOrder() {
       const selected_numbers = this.selected_numbers /* Stores the selected
       numbers for e-mail (selected numbers will be deleted during the
