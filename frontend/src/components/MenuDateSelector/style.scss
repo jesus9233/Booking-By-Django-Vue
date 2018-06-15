@@ -1,0 +1,15 @@
+@import '../../css/main';
+
+.date-selector {
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  background: $light-secondary-color;
+
+  @include border_radius(5px 5px 0px 0px);
+
+  h5 {
+    margin: 0px;
+  }
+}

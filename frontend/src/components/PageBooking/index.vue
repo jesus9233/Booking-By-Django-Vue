@@ -76,7 +76,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import sendMessage from '../../utils/sendMessage';
+// import sendMessage from '../../utils/sendMessage';
 
 export default {
   data() {

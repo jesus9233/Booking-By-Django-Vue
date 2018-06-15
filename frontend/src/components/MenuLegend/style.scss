@@ -1,0 +1,30 @@
+@import '../../css/main';
+
+.legend-block {
+  width: 100%;
+  background: $light-secondary-color;
+  color: $secondary-color;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+  @include border_radius(0px 0px 5px 5px);
+}
+
+.legend {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  @include border_radius(50%);
+}
+
+.legend-free {
+  background: $free-color;
+}
+
+.legend-reserved {
+  background: $reserved-color;
+}
+
+.legend-selected {
+  background: $selected-color;
+}

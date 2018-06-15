@@ -1,20 +1,5 @@
 @import '../../css/main';
 
-
-.date-selector {
-  text-align: center;
-  width: 100%;
-  margin: 0px;
-  padding: 10px;
-  background: $light-secondary-color;
-
-  @include border_radius(5px 5px 0px 0px);
-
-  h5 {
-    margin: 0px;
-  }
-}
-
 .room {
   position: relative;
   background: $light-color;
@@ -44,18 +29,15 @@
   color: white;
 }
 
-.table-free,
-.legend-free {
+.table-free {
   background: $free-color;
 }
 
-.table-reserved,
-.legend-reserved {
+.table-reserved {
   background: $reserved-color;
 }
 
-.table-selected,
-.legend-selected {
+.table-selected {
   background: $selected-color;
 }
 
@@ -75,26 +57,5 @@ a.table-selected:active {
 }
 
 .oval {
-  @include border_radius(50%);
-}
-
-/* continuation of the room block */
-
-.legend-block {
-  width: 100%;
-  background: $light-secondary-color;
-  color: $secondary-color;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 0px;
-
-  @include border_radius(0px 0px 5px 5px);
-}
-
-.legend {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-
   @include border_radius(50%);
 }
