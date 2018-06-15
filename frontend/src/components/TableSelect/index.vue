@@ -38,11 +38,12 @@
       <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
         <div class="room">
           <a
-          v-for="table in tables"
-          :style="getTableStyle(table)"
-          :title="`Places: ${table.places_number}`"
-          :class="getTableClass(table)"
-          @click="updateSelected(table.number)"
+            v-for="table in tables"
+            :key="table.id"
+            :style="getTableStyle(table)"
+            :title="`Places: ${table.places_number}`"
+            :class="getTableClass(table)"
+            @click="updateSelected(table.number)"
           >
           <div class="table-inner">
             {{table.number}}
@@ -142,7 +143,7 @@ export default {
         'oval': table.shape == 'oval',
         'rectangle': table.shape == 'rectangle'
       }
-    }
+    },
     isReserved(number) {
       //Check if number in reserved numbers
       if (this.reserved_numbers.indexOf(number)==-1) return false;
